@@ -35,19 +35,20 @@ pros: Certified for Netflix 4K and Prime. Dolby Vision support. Wi-Fi 6. Widely 
 cons: Seller quality varies. Verify the exact SKU has Netflix/Google badges before buying. Firmware builds differ by batch.
 dos: Only buy certified G1 listings. Test Netflix resolution immediately. Use wired Ethernet for reliable 4K streaming.
 donts: Avoid G1 clones lacking certification marks. Don't expect regular phone APKs to work on Android TV builds.
+source_page_url: https://www.amazon.com/s?k=Kinhank+G1+Netflix+certified
 product_url: https://www.amazon.com/Kinhank-G1-Compatible-Certified-Streaming/dp/B0CQFMW21W
 image_url: 
-image_local: images/kinhank-g1.jpg
+image_local: 
 aliexpress_search: Kinhank G1 Netflix Google certified
 affiliate_url:
-notes: Best pick for AliExpress shoppers seeking certified streaming. Always verify listing certification.
+notes: Best pick for AliExpress shoppers seeking certified streaming. Image pending — Amazon search did not surface exact G1 product listing.
 
 ---
 id: xiaomi-tv-box-s-3rd-gen
 rank: 2
 name: Xiaomi TV Box S (3rd Gen)
 brand: Xiaomi
-short_description: 4K UHD, Google TV 14, 32GB Memory, Dolby Vision & Atmos, WiFi 6, HDMI 2.1, Fast Streaming, Compact and Powerful
+short_description: Official Xiaomi Global hero image showing the TV Box S (3rd Gen) with 4K streaming content.
 os: Google TV 14
 soc: Amlogic S905X5M
 ram_gb: 2
@@ -66,8 +67,9 @@ pros: Newer S905X5M chip. Google TV 14 with solid multi-app 4K performance acros
 cons: Only 2GB RAM. AliExpress authenticity can be hit-or-miss — official channels safer.
 dos: Buy from official Xiaomi or reputable global sellers. Verify MDZ-32-AA model code for 3rd gen.
 donts: Don't confuse with older Mi Box S 2nd gen. Different chipset entirely.
+source_page_url: https://www.mi.com/global/product/xiaomi-tv-box-s-3rd-gen/
 product_url: https://www.mi.com/global/product/xiaomi-tv-box-s-3rd-gen/
-image_url:
+image_url: https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-tv-box-s-3rd-gen/pc/zewsxdrcftvgybhnj.jpg
 image_local: images/xiaomi-tv-box-s-3rd-gen.jpg
 aliexpress_search: Xiaomi TV Box S 3rd Gen Google TV
 affiliate_url:
@@ -78,7 +80,7 @@ id: google-tv-streamer-4k
 rank: 3
 name: Google TV Streamer 4K
 brand: Google
-short_description: Fast Streaming Entertainment with 4K HDR, Dolby Vision & Atmos, Voice Search Remote, Smart Home Control, 32 GB Storage
+short_description: Official Google Store product cutout of the Google TV Streamer (4K).
 os: Google TV 14
 soc: MediaTek MT8696
 ram_gb: 4
@@ -97,9 +99,10 @@ pros: First-party Google hardware. Gigabit Ethernet. Best-in-class update path.
 cons: Expensive compared to AliExpress alternatives. Limited AliExpress availability.
 dos: Buy from authorized retailers only. Ideal for hands-off households.
 donts: Don't plan heavy sideloading workflows — this is a certified streaming appliance.
+source_page_url: https://store.google.com/product/google_tv_streamer?hl=en-US
 product_url: https://store.google.com/us/product/google_tv_streamer?hl=en-US
-image_url:
-image_local: images/google-tv-streamer-4k.jpg
+image_url: https://lh3.googleusercontent.com/TQ3VHKHdvlpjlbE3woohVYFJrVBUgcVrCtHJN2xVFzkXEHNbqEiy1gS7vnxgUwHnRspROwVDgNWPUEWRxfCZC4j4mDaQD7DOACLe=s0
+image_local: images/google-tv-streamer-4k.png
 aliexpress_search: Google TV Streamer 4K
 affiliate_url:
 notes: Premium reference device. Worth including even without AliExpress affiliate link.
@@ -128,19 +131,20 @@ pros: Explicitly marketed as Netflix/Google certified. Native Prime support. Cle
 cons: Older Android TV 11. Only 2GB RAM and 16GB storage. Less future-proof than newer models.
 dos: Confirm you're buying KM2 Plus, not the older KM2. Verify seller authenticity.
 donts: Avoid uncertified Mecool lookalikes if you need reliable Netflix 4K.
+source_page_url: https://www.amazon.com/s?k=Mecool+KM2+Plus+Netflix+certified
 product_url: https://www.mecool.com/products/tv-box-mecool-km2-plus
-image_url:
-image_local: images/mecool-km2-plus.jpg
+image_url: 
+image_local: 
 aliexpress_search: Mecool KM2 Plus Netflix certified
 affiliate_url:
-notes: Budget-certified option. Good value when priced right.
+notes: Budget-certified option. Image pending — Amazon search did not surface exact KM2 Plus product image.
 
 ---
 id: onn-4k-plus-google-tv
 rank: 5
 name: onn. 4K Plus Streaming Box (Google TV)
 brand: onn. (Walmart)
-short_description: 4K Streaming Device with Google TV 14, Dolby Vision & Atmos, WiFi 6, 16GB Storage, Voice Remote
+short_description: Walmart primary product image showing the onn 4K Plus streaming device, remote, and retail box.
 os: Google TV 14
 soc: Amlogic S905X5M
 ram_gb: 2
@@ -159,9 +163,10 @@ pros: Excellent value for Google TV 14. Native Netflix 4K and Prime. Modern S905
 cons: US Walmart exclusive. Minimal AliExpress presence — affiliate link may stay empty.
 dos: Buy from official onn. channels if in supported regions.
 donts: Don't assume every "onn" device on marketplaces is the Plus / Google TV 14 version.
+source_page_url: https://www.walmart.com/ip/ONN-4K-PLUS/15557424949
 product_url: https://www.walmart.com/ip/ONN-4K-PLUS/15557424949
-image_url:
-image_local: images/onn-4k-plus-google-tv.jpg
+image_url: https://i5.walmartimages.com/seo/ONN-4K-PLUS_5cb8886c-a762-4c9d-9b20-afd321c48db6.8223bc997501199a69425a56229f8d01.png
+image_local: images/onn-4k-plus-google-tv.png
 aliexpress_search: onn 4K Plus Google TV
 affiliate_url:
 notes: Regional value champion. Included for completeness despite weak AliExpress coverage.
