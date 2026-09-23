@@ -4,7 +4,14 @@ This directory contains product images for the comparison site.
 
 ## Current Image Status
 
-### ✅ Images Present
+### ✅ All Images Present
+
+#### Kinhank G1
+- **Status:** ✅ Available
+- **File:** `kinhank-g1.jpg` (90KB)
+- **Source:** Amazon UK official listing
+- **URL:** https://www.amazon.co.uk/Kinhank-G1-Android-Boxes-Compatible/dp/B0D1R5T3HS
+- **CDN:** https://m.media-amazon.com/images/I/61boHz1GhPL._AC_SL1500_.jpg
 
 #### Xiaomi TV Box S (3rd Gen)
 - **Status:** ✅ Available
@@ -20,29 +27,19 @@ This directory contains product images for the comparison site.
 - **URL:** https://store.google.com/product/google_tv_streamer?hl=en-US
 - **CDN:** https://lh3.googleusercontent.com/TQ3VHKHdvlpjlbE3woohVYFJrVBUgcVrCtHJN2xVFzkXEHNbqEiy1gS7vnxgUwHnRspROwVDgNWPUEWRxfCZC4j4mDaQD7DOACLe=s0
 
+#### Mecool KM2 Plus
+- **Status:** ✅ Available
+- **File:** `mecool-km2-plus.jpg` (48KB)
+- **Source:** Official MECOOL product page
+- **URL:** https://www.mecool.com/products/tv-box-mecool-km2-plus
+- **CDN:** https://www.mecool.com/cdn/shop/products/MECOOLKM2PLUS_1.jpg?v=1770006173
+
 #### onn. 4K Plus Streaming Box
 - **Status:** ✅ Available
 - **File:** `onn-4k-plus-google-tv.png` (359KB)
 - **Source:** Walmart official listing
 - **URL:** https://www.walmart.com/ip/ONN-4K-PLUS/15557424949
 - **CDN:** https://i5.walmartimages.com/seo/ONN-4K-PLUS_5cb8886c-a762-4c9d-9b20-afd321c48db6.8223bc997501199a69425a56229f8d01.png
-
-### ⏳ Images Pending
-
-#### Kinhank G1
-- **Status:** ⏳ Pending
-- **File:** `kinhank-g1.jpg` (not yet available)
-- **Note:** Amazon search did not surface exact G1 product listing
-- **Reference:** https://www.amazon.com/s?k=Kinhank+G1+Netflix+certified
-- **Placeholder:** Site will gracefully handle missing image (card displays without photo)
-
-#### Mecool KM2 Plus
-- **Status:** ⏳ Pending
-- **File:** `mecool-km2-plus.jpg` (not yet available)
-- **Note:** Amazon search did not surface exact KM2 Plus product image
-- **Reference:** https://www.amazon.com/s?k=Mecool+KM2+Plus+Netflix+certified
-- **Official:** https://www.mecool.com/products/tv-box-mecool-km2-plus
-- **Placeholder:** Site will gracefully handle missing image (card displays without photo)
 
 ## Image Handling
 

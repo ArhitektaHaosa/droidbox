@@ -111,6 +111,8 @@ Each product in `affiliate.txt` uses these fields:
 | `product_url` | Optional | Direct AliExpress item link (non-affiliate) |
 | `image_url` | Optional | Product image URL (AliExpress CDN or other) |
 | `image_local` | Optional | Path to mirrored image (e.g. `images/kinhank-g1.jpg`) |
+| `video_url` | Optional | Product video URL (CDN hotlink) |
+| `video_local` | Optional | Path to mirrored video (e.g. `videos/<id>.mp4`) |
 | `aliexpress_search` | Yes | Fallback search query |
 | `affiliate_url` | **Important** | Your s.click affiliate link (leave blank until you have it) |
 | `notes` | Optional | Additional context |

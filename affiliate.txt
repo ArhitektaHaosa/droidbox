@@ -20,7 +20,7 @@ id: kinhank-g1
 rank: 1
 name: Kinhank G1
 brand: Kinhank
-short_description: Android 14.0 TV Box, Compatible with Google Netflix Certified, 4GB+32GB Streaming Player, Ultra 4K HDR 10+/Dolby Vision, Wi-Fi 6, BT 5.0, Voice Control
+short_description: Amazon product image of the Kinhank G1 Android 14 TV box with 4K support, Netflix/Google certification, Wi‑Fi 6 and 4GB+32GB storage.
 os: Android TV / Google TV (updated toward Android 14 on some units)
 soc: Amlogic S905X4-J
 ram_gb: 4
@@ -40,15 +40,15 @@ pros: Certified for Netflix 4K and Prime. Dolby Vision support. Wi-Fi 6. Widely 
 cons: Seller quality varies. Verify the exact SKU has Netflix/Google badges before buying. Firmware builds differ by batch.
 dos: Only buy certified G1 listings. Test Netflix resolution immediately. Use wired Ethernet for reliable 4K streaming.
 donts: Avoid G1 clones lacking certification marks. Don't expect regular phone APKs to work on Android TV builds.
-source_page_url: https://www.amazon.com/s?k=Kinhank+G1+Netflix+certified
-product_url: https://www.amazon.com/Kinhank-G1-Compatible-Certified-Streaming/dp/B0CQFMW21W
-image_url: 
-image_local: 
+source_page_url: https://www.amazon.co.uk/Kinhank-G1-Android-Boxes-Compatible/dp/B0D1R5T3HS
+product_url: https://www.amazon.co.uk/Kinhank-G1-Android-Boxes-Compatible/dp/B0D1R5T3HS
+image_url: https://m.media-amazon.com/images/I/61boHz1GhPL._AC_SL1500_.jpg
+image_local: images/kinhank-g1.jpg
 video_url:
 video_local:
 aliexpress_search: Kinhank G1 Netflix Google certified
 affiliate_url:
-notes: Best pick for AliExpress shoppers seeking certified streaming. Image pending — Amazon search did not surface exact G1 product listing.
+notes: Best pick for AliExpress shoppers seeking certified streaming. Official image from Amazon UK listing.
 
 ---
 id: xiaomi-tv-box-s-3rd-gen
@@ -123,7 +123,7 @@ id: mecool-km2-plus
 rank: 4
 name: Mecool KM2 Plus
 brand: Mecool
-short_description: 4K Android 11.0 Google Netflix Certified Android TV Player, Google Assistant, Prime Video, YouTube, 2GB+16GB, WiFi 5, BT 5.0
+short_description: Official MECOOL product image of the Netflix- and Google-certified KM2 Plus Android TV box with S905X4-B, AV1 HDR, 4K streaming and Android TV 11.
 os: Android TV 11
 soc: Amlogic S905X4-B
 ram_gb: 2
@@ -142,15 +142,15 @@ pros: Explicitly marketed as Netflix/Google certified. Native Prime support. Cle
 cons: Older Android TV 11. Only 2GB RAM and 16GB storage. Less future-proof than newer models.
 dos: Confirm you're buying KM2 Plus, not the older KM2. Verify seller authenticity.
 donts: Avoid uncertified Mecool lookalikes if you need reliable Netflix 4K.
-source_page_url: https://www.amazon.com/s?k=Mecool+KM2+Plus+Netflix+certified
+source_page_url: https://www.mecool.com/products/tv-box-mecool-km2-plus
 product_url: https://www.mecool.com/products/tv-box-mecool-km2-plus
-image_url: 
-image_local: 
+image_url: https://www.mecool.com/cdn/shop/products/MECOOLKM2PLUS_1.jpg?v=1770006173
+image_local: images/mecool-km2-plus.jpg
 video_url:
 video_local:
 aliexpress_search: Mecool KM2 Plus Netflix certified
 affiliate_url:
-notes: Budget-certified option. Image pending — Amazon search did not surface exact KM2 Plus product image.
+notes: Budget-certified option. Official image from MECOOL product page.
 
 ---
 id: onn-4k-plus-google-tv
