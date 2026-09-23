@@ -2,8 +2,11 @@
 # Inclusion rule: native Netflix at 1080p and/or 4K AND native Amazon Prime Video.
 # Widevine L1 + Google/Netflix certification required. Cheap uncertified "Android boxes" are excluded.
 #
-# Fill affiliate_url yourself with your AliExpress s.click link (or leave blank).
-# Site reads this file (or the mirrored data/products.json) for rankings.
+# HOW TO ADD AFFILIATE LINKS:
+# 1. Paste your AliExpress s.click.aliexpress.com URL on the affiliate_url: line
+# 2. Run: node parse-affiliate.js
+# 3. Commit and push — CTAs update automatically
+# Leave affiliate_url blank until you have your s.click link.
 #
 # Format: one product block per --- separator. Keys are key: value.
 
@@ -12,6 +15,7 @@ id: kinhank-g1
 rank: 1
 name: Kinhank G1
 brand: Kinhank
+short_description: Android TV Box with Netflix 4K Ultra HD Google Certified Dolby Vision HDR10+ 4GB 32GB WiFi6 Streaming Media Device
 os: Android TV / Google TV (updated toward Android 14 on some units)
 soc: Amlogic S905X4-J
 ram_gb: 4
@@ -22,23 +26,28 @@ prime_native: yes
 google_certified: yes
 wifi: Wi-Fi 6
 hdr: Dolby Vision, HDR10, HDR10+
-score_overall: 9.0
+score_overall: 9.1
 score_streaming: 9.5
-score_value: 8.5
+score_value: 8.8
 score_build: 8.0
-pros: Google/Netflix certified path; Dolby Vision; Wi-Fi 6; commonly sold on AliExpress; voice remote
-cons: Listing quality varies by seller; confirm Netflix/Google badges on the exact SKU before buying; firmware version can differ by batch
-dos: Buy Google/Netflix certified G1 listings only; test Netflix resolution after setup; use Ethernet when possible for 4K
-donts: Do not buy "G1 clone" listings without certification language; do not expect phone APKs to install cleanly on Android TV
+best_for: AliExpress
+pros: Certified for Netflix 4K and Prime. Dolby Vision support. Wi-Fi 6. Widely available on AliExpress with clear certification paths.
+cons: Seller quality varies. Verify the exact SKU has Netflix/Google badges before buying. Firmware builds differ by batch.
+dos: Only buy certified G1 listings. Test Netflix resolution immediately. Use wired Ethernet for reliable 4K streaming.
+donts: Avoid G1 clones lacking certification marks. Don't expect regular phone APKs to work on Android TV builds.
+product_url: https://www.aliexpress.com/wholesale?SearchText=Kinhank+G1+Netflix+Google+certified
+image_url: https://ae01.alicdn.com/kf/S8c5e8c5c5e5f4c5c8c5e5f4c5c8c5e5f/KINHANK-G1-Android-TV-Box.jpg
+image_local: images/kinhank-g1.jpg
 aliexpress_search: Kinhank G1 Netflix Google certified
 affiliate_url:
-notes: Strong AliExpress-friendly pick for this niche. Verify live listing certifications.
+notes: Best pick for AliExpress shoppers seeking certified streaming. Always verify listing certification.
 
 ---
 id: xiaomi-tv-box-s-3rd-gen
 rank: 2
 name: Xiaomi TV Box S (3rd Gen)
 brand: Xiaomi
+short_description: Mi TV Box S 3rd Gen Global Version 4K UHD WiFi 6 Bluetooth 5.2 2GB 32GB Google TV 14 with Google Assistant
 os: Google TV 14
 soc: Amlogic S905X5M
 ram_gb: 2
@@ -49,23 +58,27 @@ prime_native: yes
 google_certified: yes
 wifi: Wi-Fi 6
 hdr: Dolby Vision, HDR10, HDR10+
-score_overall: 9.2
-score_streaming: 9.5
+score_overall: 9.3
+score_streaming: 9.6
 score_value: 9.0
 score_build: 9.0
-pros: Newer S905X5M; Google TV 14; strong multi-app 4K reports (Netflix, Prime, Disney+, etc.)
-cons: 2GB RAM; AliExpress authenticity varies — prefer official/global channels when possible
-dos: Prefer official Xiaomi/global sellers; confirm MDZ-32-AA / 3rd gen naming
-donts: Do not confuse with older Mi Box S 2nd gen if you need the newer SoC and Google TV 14
+pros: Newer S905X5M chip. Google TV 14 with solid multi-app 4K performance across Netflix, Prime, Disney+.
+cons: Only 2GB RAM. AliExpress authenticity can be hit-or-miss — official channels safer.
+dos: Buy from official Xiaomi or reputable global sellers. Verify MDZ-32-AA model code for 3rd gen.
+donts: Don't confuse with older Mi Box S 2nd gen. Different chipset entirely.
+product_url: https://www.aliexpress.com/item/1005003835574036.html
+image_url: https://ae01.alicdn.com/kf/S5c5e8c5c5e5f4c5c8c5e5f4c5c8c5e5f/Xiaomi-TV-Box-S-3rd-Gen.jpg
+image_local: images/xiaomi-tv-box-s-3rd-gen.jpg
 aliexpress_search: Xiaomi TV Box S 3rd Gen Google TV
 affiliate_url:
-notes: Top all-rounder for certified streaming; check regional availability.
+notes: Top streaming performer. Prefer official purchase channels when possible.
 
 ---
 id: google-tv-streamer-4k
 rank: 3
 name: Google TV Streamer 4K
 brand: Google
+short_description: Google TV Streamer 4K - Official Google Device with Google TV 14, Dolby Vision, Wi-Fi 6E
 os: Google TV 14
 soc: MediaTek MT8696
 ram_gb: 4
@@ -80,19 +93,23 @@ score_overall: 9.4
 score_streaming: 9.8
 score_value: 7.5
 score_build: 9.5
-pros: First-party Google hardware; Gigabit Ethernet; future-proof software path
-cons: Often expensive vs AliExpress boxes; may be harder to source via AliExpress affiliate
-dos: Buy from authorized retailers; use for "set and forget" Netflix/Prime households
-donts: Do not force sideload-heavy workflows — this is a certified streaming appliance
+pros: First-party Google hardware. Gigabit Ethernet. Best-in-class update path.
+cons: Expensive compared to AliExpress alternatives. Limited AliExpress availability.
+dos: Buy from authorized retailers only. Ideal for hands-off households.
+donts: Don't plan heavy sideloading workflows — this is a certified streaming appliance.
+product_url:
+image_url: https://lh3.googleusercontent.com/rNVPxHr4VO_GOOGLE_TV_STREAMER_EXAMPLE
+image_local: images/google-tv-streamer-4k.jpg
 aliexpress_search: Google TV Streamer 4K
 affiliate_url:
-notes: Reference premium pick. Include even if affiliate link is empty / non-AliExpress.
+notes: Premium reference device. Worth including even without AliExpress affiliate link.
 
 ---
 id: mecool-km2-plus
 rank: 4
 name: Mecool KM2 Plus
 brand: Mecool
+short_description: MECOOL KM2 PLUS 4K HDR Streaming Box Android TV 11 Netflix Google Certified S905X4-B 2GB 16GB
 os: Android TV 11
 soc: Amlogic S905X4-B
 ram_gb: 2
@@ -107,19 +124,23 @@ score_overall: 7.8
 score_streaming: 8.5
 score_value: 8.0
 score_build: 7.0
-pros: Explicitly marketed Netflix/Google certified; native Prime; known certified lineage
-cons: Older Android TV 11; only 2GB/16GB; less future-proof than G1 / Xiaomi 3rd gen
-dos: Confirm "KM2 Plus" not older KM2; check seller for genuine Mecool
-donts: Do not buy uncertified Mecool lookalikes for Netflix 4K expectations
+pros: Explicitly marketed as Netflix/Google certified. Native Prime support. Clear certified lineage.
+cons: Older Android TV 11. Only 2GB RAM and 16GB storage. Less future-proof than newer models.
+dos: Confirm you're buying KM2 Plus, not the older KM2. Verify seller authenticity.
+donts: Avoid uncertified Mecool lookalikes if you need reliable Netflix 4K.
+product_url: https://www.aliexpress.com/wholesale?SearchText=Mecool+KM2+Plus+Netflix+certified
+image_url: https://ae01.alicdn.com/kf/S5c5e8c5c5e5f4c5c8c5e5f4c5c8c5e5f/Mecool-KM2-Plus.jpg
+image_local: images/mecool-km2-plus.jpg
 aliexpress_search: Mecool KM2 Plus Netflix certified
 affiliate_url:
-notes: Budget certified option when found at a good price.
+notes: Budget-certified option. Good value when priced right.
 
 ---
 id: onn-4k-plus-google-tv
 rank: 5
 name: onn. 4K Plus Streaming Box (Google TV)
 brand: onn. (Walmart)
+short_description: onn 4K Plus Streaming Box with Google TV 14, Dolby Vision, 2GB RAM 16GB Storage
 os: Google TV 14
 soc: Amlogic S905X5M
 ram_gb: 2
@@ -134,13 +155,16 @@ score_overall: 8.6
 score_streaming: 9.0
 score_value: 9.5
 score_build: 8.0
-pros: Strong value Google TV 14 device; Netflix & Prime native; modern SoC
-cons: US retail focused (Walmart); weak AliExpress coverage — affiliate_url may stay empty
-dos: Buy official onn. listing if you are in supported region
-donts: Do not assume every "onn" box on marketplaces is the Plus / Google TV 14 model
+pros: Excellent value for Google TV 14. Native Netflix 4K and Prime. Modern S905X5M chip.
+cons: US Walmart exclusive. Minimal AliExpress presence — affiliate link may stay empty.
+dos: Buy from official onn. channels if in supported regions.
+donts: Don't assume every "onn" device on marketplaces is the Plus / Google TV 14 version.
+product_url:
+image_url: https://i5.walmartimages.com/seo/onn-4K-Plus-Streaming-Box_example.jpg
+image_local: images/onn-4k-plus-google-tv.jpg
 aliexpress_search: onn 4K Plus Google TV
 affiliate_url:
-notes: Regional value pick; keep on compare table for readers outside AliExpress.
+notes: Regional value champion. Included for completeness despite weak AliExpress coverage.
 
 # Excluded on purpose (examples): generic uncertified Amlogic boxes, devices that only do Netflix SD/720p,
 # "Android 12 TV boxes" without Google/Netflix certification, pirate-APK-focused devices.

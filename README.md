@@ -1,163 +1,195 @@
-# Droidbox Guide — Certified Android TV Box Comparison
+# Droidbox — Certified Android TV Box Comparison
 
-A static comparison website for certified Android TV / Google TV streaming boxes with native Netflix 4K and Amazon Prime Video support.
+A dark-themed static comparison site for certified Android TV / Google TV streaming boxes with native Netflix 4K and Amazon Prime Video support.
 
-## 🎯 What This Is
+## What This Is
 
-This site focuses exclusively on **Google/Netflix certified devices** with:
+This site lists **only** devices with:
 - **Widevine L1** DRM certification
+- **Google Play Certified** (Android TV) or **Google TV certified**
 - **Native Netflix** at 1080p or 4K
 - **Native Amazon Prime Video** support
 
-We exclude cheap uncertified "Android boxes" that only support Netflix at SD/720p or rely on sideloaded APKs.
+No uncertified boxes. No sideload-dependent devices. No SD/720p Netflix boxes.
 
-## 📋 Included Devices
+## Included Devices
 
-The current catalog includes:
-1. **Kinhank G1** — Amlogic S905X4-J, 4GB/32GB, Wi-Fi 6, Dolby Vision
-2. **Xiaomi TV Box S (3rd Gen)** — Amlogic S905X5M, Google TV 14, Wi-Fi 6
-3. **Google TV Streamer 4K** — MediaTek MT8696, first-party Google hardware
-4. **Mecool KM2 Plus** — Budget certified option, Android TV 11
-5. **onn. 4K Plus** — Walmart value pick, Google TV 14
+| Rank | Device | Overall Score | Best For |
+|------|--------|---------------|----------|
+| 1 | Kinhank G1 | 9.1 | AliExpress shoppers |
+| 2 | Xiaomi TV Box S (3rd Gen) | 9.3 | Streaming performance |
+| 3 | Google TV Streamer 4K | 9.4 | Premium / first-party |
+| 4 | Mecool KM2 Plus | 7.8 | Budget certified |
+| 5 | onn. 4K Plus | 8.6 | US retail (Walmart) |
 
-All devices meet the strict certification requirements.
+## How to Add Affiliate Links
 
-## 🔧 How to Manage Products
+**This is the ONLY thing you need to edit to make money from this site.**
 
-### Editing Product Data
+### Step 1: Get Your AliExpress Affiliate Link
 
-Products are stored in `affiliate.txt` at the root of this repository. This file uses a simple key-value format separated by `---` delimiters.
+1. Join the [AliExpress Affiliate Program](https://portals.aliexpress.com/)
+2. Find a product listing on AliExpress
+3. Generate an affiliate link — it will look like: `https://s.click.aliexpress.com/e/_XXXXX`
 
-**Format:**
+### Step 2: Edit affiliate.txt
+
+1. Open `affiliate.txt` in the repository root
+2. Find the product you want to add a link for
+3. Paste your `s.click.aliexpress.com` URL on the `affiliate_url:` line
+
+**Example:**
 ```
 ---
-id: product-slug
+id: kinhank-g1
 rank: 1
-name: Product Name
-brand: Brand Name
-# ... more fields ...
-affiliate_url: https://s.click.aliexpress.com/your-link-here
-# Leave affiliate_url blank if not yet configured
+name: Kinhank G1
+# ... other fields ...
+affiliate_url: https://s.click.aliexpress.com/e/_DeXaMpL
 ```
 
-### Required Fields
-
-- `id`: Unique slug (used for anchor links)
-- `rank`: Display order (1 = top)
-- `name`, `brand`, `os`, `soc`: Basic product info
-- `ram_gb`, `storage_gb`: Memory specs (numbers)
-- `widevine`: DRM level (should be "L1")
-- `netflix_max`: "1080p" or "4K"
-- `prime_native`: "yes" for certified devices
-- `google_certified`: "yes" for certified devices
-- `wifi`, `hdr`: Connectivity and video specs
-- `score_overall`, `score_streaming`, `score_value`, `score_build`: Numerical scores (0-10)
-- `pros`, `cons`, `dos`, `donts`: User guidance text
-- `aliexpress_search`: Fallback search query
-- `affiliate_url`: Your AliExpress affiliate link (see below)
-- `notes`: Optional additional context
-
-### Adding Affiliate Links
-
-**Important:** Only add devices that meet the certification requirements!
-
-1. Open `affiliate.txt`
-2. Find the product's `affiliate_url:` field
-3. Paste your AliExpress `s.click.aliexpress.com` affiliate link
-4. Example:
-   ```
-   affiliate_url: https://s.click.aliexpress.com/e/_DeXaMpL
-   ```
-
-**About AliExpress Affiliate Links:**
-- AliExpress affiliate links use the format: `https://s.click.aliexpress.com/e/_XXXXX`
-- Generate these through the [AliExpress Affiliate Program](https://portals.aliexpress.com/)
-- If a product has no affiliate link, the site shows a "Search on AliExpress" fallback button
-- Never invent or guess affiliate URLs — leave the field empty if you don't have one
-
-### Rebuilding the Data File (Optional)
-
-The site loads `data/products.json` which is generated from `affiliate.txt`:
+### Step 3: Regenerate Data (Optional)
 
 ```bash
 node parse-affiliate.js
 ```
 
-This step is **optional** — the site works fine referencing the JSON file that was generated during initial setup. You only need to re-run the parser if you edit `affiliate.txt` and want to test changes locally before deploying.
+This updates `data/products.json` from `affiliate.txt`. The site reads `products.json` at runtime.
 
-## 🚀 Deployment
+**Note:** If you commit and push `affiliate.txt`, you can regenerate `products.json` in CI or locally before deploying.
+
+### Step 4: Commit and Deploy
+
+```bash
+git add affiliate.txt data/products.json
+git commit -m "Add affiliate link for Kinhank G1"
+git push
+```
+
+Your CTA buttons will update from "Affiliate Link Pending" to "View on AliExpress →" automatically.
+
+## Important: Never Invent Affiliate URLs
+
+- Leave `affiliate_url:` blank if you don't have a link yet
+- **Never** type or guess s.click URLs — they won't work and may violate ToS
+- The site gracefully handles empty affiliate_url fields with a placeholder button
+
+## File Structure
+
+```
+affiliate.txt              # Source of truth — edit this to add affiliate links
+data/products.json         # Generated from affiliate.txt (site reads this)
+parse-affiliate.js         # Converts affiliate.txt → products.json
+LINKS.md                   # Checklist for tracking affiliate link status
+index.html                 # Main page
+styles.css                 # Dark streaming theme CSS
+app.js                     # Product rendering logic
+images/                    # Optional: mirror product images here
+README.md                  # This file
+```
+
+## Product Data Fields
+
+Each product in `affiliate.txt` uses these fields:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `id` | Yes | Unique slug (e.g. `kinhank-g1`) |
+| `rank` | Yes | Display order (1 = top) |
+| `name` | Yes | Product name |
+| `brand` | Yes | Manufacturer |
+| `short_description` | Recommended | Short blurb from AliExpress listing |
+| `os`, `soc`, `ram_gb`, `storage_gb` | Yes | Technical specs |
+| `widevine` | Yes | Should be "L1" for all certified devices |
+| `netflix_max` | Yes | "1080p" or "4K" |
+| `prime_native` | Yes | "yes" for certified devices |
+| `google_certified` | Yes | "yes" for certified devices |
+| `wifi`, `hdr` | Yes | Connectivity and video specs |
+| `score_overall`, `score_streaming`, `score_value`, `score_build` | Yes | Numerical scores (0-10) |
+| `best_for` | Optional | Set to "AliExpress" to show special badge |
+| `pros`, `cons`, `dos`, `donts` | Yes | Buying guidance |
+| `product_url` | Optional | Direct AliExpress item link (non-affiliate) |
+| `image_url` | Optional | Product image URL (AliExpress CDN or other) |
+| `image_local` | Optional | Path to mirrored image (e.g. `images/kinhank-g1.jpg`) |
+| `aliexpress_search` | Yes | Fallback search query |
+| `affiliate_url` | **Important** | Your s.click affiliate link (leave blank until you have it) |
+| `notes` | Optional | Additional context |
+
+## Deployment
 
 ### GitHub Pages (Recommended)
 
-This site is designed for **GitHub Pages** deployment:
-
-1. **Push your changes** to the `main` branch (or your default branch)
-2. Go to **Settings → Pages** in your GitHub repository
-3. Under **Source**, select:
-   - **Branch:** `main` (or your branch)
-   - **Folder:** `/ (root)`
+1. Push your changes to `main` (or your default branch)
+2. Go to **Settings → Pages**
+3. Source: **Branch: main**, **Folder: / (root)**
 4. Click **Save**
-5. Your site will be live at `https://your-username.github.io/your-repo-name/`
+5. Site goes live at `https://your-username.github.io/your-repo-name/`
 
 ### Local Testing
 
-Open `index.html` in a web browser:
-
 ```bash
-# Simple local server (Python 3)
+# Python 3
 python3 -m http.server 8000
 
-# Then visit http://localhost:8000
-```
-
-Or use any static file server:
-```bash
+# Node.js
 npx serve .
-# or
+
+# PHP
 php -S localhost:8000
 ```
 
-### Alternative Hosting
+Then visit `http://localhost:8000`
 
-The site is pure static HTML/CSS/JS. You can host it on:
-- **Netlify** (drag & drop the folder)
-- **Vercel** (import the Git repository)
-- **Cloudflare Pages** (connect to GitHub)
-- Any static file host (S3, Azure Static Web Apps, etc.)
+### Other Hosts
 
-## 📁 File Structure
+The site is pure static HTML/CSS/JS. Host it anywhere:
+- Netlify (drag & drop)
+- Vercel (Git import)
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Any static file host
 
-```
-.
-├── index.html           # Main page
-├── styles.css           # Responsive styles (mobile-first)
-├── app.js               # Product rendering logic
-├── affiliate.txt        # Product catalog (edit this!)
-├── data/
-│   └── products.json    # Generated product data
-├── parse-affiliate.js   # Optional parser script
-└── README.md            # This file
-```
+## Design Features
 
-## 🎨 Customization
+### Dark Streaming Theme
+- Near-black background (#0b0d10)
+- Elevated cards (#14181f)
+- Electric teal/cyan accents (#2ee6a6, #3dffa8)
+- High contrast for readability
+- Subtle gradient header with accent line
 
-### Changing Colors
+### Mobile-First Layout
+- Primary: Vertical comparison cards with images and key specs
+- Secondary: Horizontal scrollable comparison table (shows on tablet+)
+- Collapsible "Show Buying Tips" on mobile (auto-expanded on desktop)
+- Large tap targets (48px+)
+- Sticky nav with minimal items
 
-Edit CSS variables in `styles.css`:
+### Score Color Coding
+- **Green** (9.0+): High score
+- **Yellow** (8.0-8.9): Medium score
+- **Red** (<8.0): Low score
 
+### Special Badges
+- "Best for AliExpress" badge on Kinhank G1 (set via `best_for: AliExpress` field)
+- Top-3 rank badges have special teal glow on mobile cards
+
+## Customization
+
+### Change Accent Color
+
+Edit `styles.css`:
 ```css
 :root {
-  --primary-color: #1a73e8;    /* Main brand color */
-  --success-color: #34a853;    /* High scores */
-  --warning-color: #fbbc04;    /* Medium scores */
-  --danger-color: #ea4335;     /* Low scores */
+  --accent-teal: #2ee6a6;           /* Main accent */
+  --accent-teal-bright: #3dffa8;    /* Hover/highlight */
+  --accent-teal-dim: #1fa574;       /* Subtle borders */
 }
 ```
 
-### Modifying Scoring Thresholds
+### Adjust Score Thresholds
 
-In `app.js`, adjust the `getScoreClass()` function:
-
+Edit `app.js`:
 ```javascript
 function getScoreClass(score) {
   if (score >= 9.0) return 'high';      // Green
@@ -166,60 +198,95 @@ function getScoreClass(score) {
 }
 ```
 
-## ⚖️ Legal & Compliance
+### Add Product Images
+
+**Option 1: Hotlink from AliExpress CDN**
+```
+image_url: https://ae01.alicdn.com/kf/...../Product-Image.jpg
+```
+
+**Option 2: Mirror into repo**
+1. Download product image
+2. Save to `images/product-id.jpg`
+3. Set in affiliate.txt:
+```
+image_local: images/kinhank-g1.jpg
+```
+
+Option 2 is safer (won't break if CDN blocks hotlinking).
+
+## Legal & Compliance
 
 ### Affiliate Disclosure
-
-The site includes an affiliate disclaimer in the footer (required by FTC guidelines and most affiliate programs). The disclosure states:
+The site includes an FTC-compliant affiliate disclaimer in the footer:
 
 > **Affiliate Disclosure:** Links on this site may earn us a commission if you make a purchase. This helps support our testing and review work at no extra cost to you.
 
-This disclaimer appears on every page. Do not remove it.
+**Do not remove this.** It's required by FTC guidelines and most affiliate programs.
 
-### Product Certification
-
-Only include devices that **genuinely meet** the certification requirements:
+### Certification Requirements
+Only include devices that **genuinely meet** the requirements:
 - Widevine L1 certified
-- Google Play Certified (for Android TV) or Google TV certified
+- Google Play Certified (Android TV) or Google TV certified
 - Native Netflix app with 1080p or 4K support
 - Native Amazon Prime Video app
 
 Do not add uncertified devices or devices that require sideloading streaming apps.
 
-## 🛠️ Troubleshooting
+## Tracking Affiliate Link Status
 
-### Products not showing up?
+See `LINKS.md` for a checklist of which products have affiliate links configured.
 
+Quick check:
+```bash
+grep -A 1 "^id:" affiliate.txt | grep -E "(^id:|^affiliate_url:)"
+```
+
+Or just view the site — products without affiliate links show a "Affiliate Link Pending" placeholder button.
+
+## Troubleshooting
+
+### Products not showing?
 1. Check `data/products.json` exists and contains valid JSON
-2. Re-run `node parse-affiliate.js` to regenerate from `affiliate.txt`
-3. Check browser console for JavaScript errors
-4. Ensure `affiliate.txt` follows the correct format
+2. Re-run `node parse-affiliate.js`
+3. Check browser console for errors
+4. Verify `affiliate.txt` syntax (use `---` separators, `key: value` format)
 
 ### Affiliate links not working?
-
-1. Verify the URL starts with `https://s.click.aliexpress.com/`
-2. Test the link in an incognito/private browser window
+1. Verify URL starts with `https://s.click.aliexpress.com/`
+2. Test link in incognito browser
 3. Check your AliExpress affiliate account status
-4. Some products may not have affiliate links — that's okay, the fallback search button will show instead
+4. Some products may not have links — that's okay, fallback button shows
 
-### Local file access issues?
+### Images not loading?
+1. Check `image_url` or `image_local` in `affiliate.txt`
+2. If hotlinking from CDN, the host may block it — mirror images to `images/` instead
+3. Images fail gracefully (they just don't show up)
 
+### Local file:// access issues?
 Modern browsers block `fetch()` from `file://` URLs. Use a local web server:
 ```bash
 python3 -m http.server 8000
 ```
 
-## 📧 Support
+## Tech Stack
 
-For questions about:
-- **Product certification:** Consult official Google/Netflix certification databases
-- **AliExpress affiliate program:** Visit [AliExpress Portals](https://portals.aliexpress.com/)
-- **GitHub Pages:** See [GitHub Pages documentation](https://docs.github.com/en/pages)
+- Pure static HTML/CSS/JavaScript (no framework)
+- No build step required (optional `parse-affiliate.js` to regenerate JSON)
+- Mobile-first responsive design
+- Dark theme optimized for accessibility (WCAG contrast)
+- GitHub Pages ready
 
-## 📜 License
+## Support
+
+- **Product certification:** Check official Google/Netflix certification databases
+- **AliExpress affiliate program:** [AliExpress Portals](https://portals.aliexpress.com/)
+- **GitHub Pages:** [GitHub Pages docs](https://docs.github.com/en/pages)
+
+## License
 
 See the `LICENSE` file in this repository.
 
 ---
 
-**Built for transparency and certified streaming quality.**
+**Built for transparency. Certified devices only. Dark theme. Mobile-first.**
