@@ -45,7 +45,7 @@
             <span class="brand">${escapeHtml(product.brand)}</span>
           </div>
         </div>
-        ${renderProductImage(product, 'comparison-card-image')}
+        ${renderProductMedia(product, 'comparison-card-image')}
         <div class="comparison-card-specs">
           <div class="spec">
             <span class="spec-value ${getScoreClass(product.score_overall)}">${product.score_overall.toFixed(1)}</span>
@@ -102,7 +102,7 @@
         
         <div class="product-header">
           <div class="product-rank">#${product.rank}</div>
-          ${renderProductImage(product, 'product-image')}
+          ${renderProductMedia(product, 'product-image')}
           <div class="product-title">
             <h3>${escapeHtml(product.name)}</h3>
             <span class="brand">${escapeHtml(product.brand)}</span>
@@ -209,6 +209,24 @@
       return `<img src="${escapeHtml(product.image_url)}" alt="${escapeHtml(product.name)}" class="${className}" onerror="this.style.display='none'">`;
     }
     return '';
+  }
+
+  // Render product video (local or URL) - muted autoplay loop or manual control
+  function renderProductVideo(product, className) {
+    const videoSrc = product.video_local || product.video_url;
+    if (!videoSrc) return '';
+    
+    return `<video class="${className}" muted loop playsinline autoplay onerror="this.style.display='none'">
+      <source src="${escapeHtml(videoSrc)}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>`;
+  }
+
+  // Render media (video takes priority if available, otherwise image)
+  function renderProductMedia(product, className) {
+    const video = renderProductVideo(product, className + ' product-video');
+    if (video) return video;
+    return renderProductImage(product, className);
   }
 
   // Render CTA button - uses affiliate_url from data/products.json ONLY

@@ -227,6 +227,13 @@ section h2 {
   background: var(--bg-dark);
 }
 
+.product-video {
+  border-radius: var(--radius-md);
+  max-width: 100%;
+  height: auto;
+  background: var(--bg-dark);
+}
+
 .comparison-card-specs {
   display: flex;
   justify-content: space-between;
@@ -420,6 +427,11 @@ section h2 {
   border-radius: var(--radius-md);
   background: var(--bg-dark);
   padding: var(--spacing-sm);
+}
+
+.product-image.product-video {
+  max-width: 300px;
+  padding: 0;
 }
 
 .product-rank {

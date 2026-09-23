@@ -8,6 +8,11 @@
 # 3. Commit and push — CTAs update automatically
 # Leave affiliate_url blank until you have your s.click link.
 #
+# MEDIA FIELDS (all optional):
+# - image_url / image_local: Product photos
+# - video_url / video_local: Product videos (e.g., videos/<id>.mp4)
+# Site gracefully handles missing media — cards work with or without photos/videos.
+#
 # Format: one product block per --- separator. Keys are key: value.
 
 ---
@@ -39,6 +44,8 @@ source_page_url: https://www.amazon.com/s?k=Kinhank+G1+Netflix+certified
 product_url: https://www.amazon.com/Kinhank-G1-Compatible-Certified-Streaming/dp/B0CQFMW21W
 image_url: 
 image_local: 
+video_url:
+video_local:
 aliexpress_search: Kinhank G1 Netflix Google certified
 affiliate_url:
 notes: Best pick for AliExpress shoppers seeking certified streaming. Image pending — Amazon search did not surface exact G1 product listing.
@@ -71,6 +78,8 @@ source_page_url: https://www.mi.com/global/product/xiaomi-tv-box-s-3rd-gen/
 product_url: https://www.mi.com/global/product/xiaomi-tv-box-s-3rd-gen/
 image_url: https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-tv-box-s-3rd-gen/pc/zewsxdrcftvgybhnj.jpg
 image_local: images/xiaomi-tv-box-s-3rd-gen.jpg
+video_url:
+video_local:
 aliexpress_search: Xiaomi TV Box S 3rd Gen Google TV
 affiliate_url:
 notes: Top streaming performer. Prefer official purchase channels when possible.
@@ -103,6 +112,8 @@ source_page_url: https://store.google.com/product/google_tv_streamer?hl=en-US
 product_url: https://store.google.com/us/product/google_tv_streamer?hl=en-US
 image_url: https://lh3.googleusercontent.com/TQ3VHKHdvlpjlbE3woohVYFJrVBUgcVrCtHJN2xVFzkXEHNbqEiy1gS7vnxgUwHnRspROwVDgNWPUEWRxfCZC4j4mDaQD7DOACLe=s0
 image_local: images/google-tv-streamer-4k.png
+video_url:
+video_local:
 aliexpress_search: Google TV Streamer 4K
 affiliate_url:
 notes: Premium reference device. Worth including even without AliExpress affiliate link.
@@ -135,6 +146,8 @@ source_page_url: https://www.amazon.com/s?k=Mecool+KM2+Plus+Netflix+certified
 product_url: https://www.mecool.com/products/tv-box-mecool-km2-plus
 image_url: 
 image_local: 
+video_url:
+video_local:
 aliexpress_search: Mecool KM2 Plus Netflix certified
 affiliate_url:
 notes: Budget-certified option. Image pending — Amazon search did not surface exact KM2 Plus product image.
@@ -167,6 +180,8 @@ source_page_url: https://www.walmart.com/ip/ONN-4K-PLUS/15557424949
 product_url: https://www.walmart.com/ip/ONN-4K-PLUS/15557424949
 image_url: https://i5.walmartimages.com/seo/ONN-4K-PLUS_5cb8886c-a762-4c9d-9b20-afd321c48db6.8223bc997501199a69425a56229f8d01.png
 image_local: images/onn-4k-plus-google-tv.png
+video_url:
+video_local:
 aliexpress_search: onn 4K Plus Google TV
 affiliate_url:
 notes: Regional value champion. Included for completeness despite weak AliExpress coverage.

@@ -214,6 +214,27 @@ function getScoreClass(score) {
 
 See `images/README.md` for specific image sources for each product.
 
+### Add Product Videos (Optional)
+
+**Video support:** Site can display short product demonstration videos instead of static images.
+
+**When video files arrive:**
+1. Copy to `videos/<product-id>.mp4`
+2. Update `affiliate.txt`:
+   ```
+   video_local: videos/xiaomi-tv-box-s-3rd-gen.mp4
+   ```
+3. Run `node parse-affiliate.js`
+4. Commit and push
+
+**Video display:**
+- Muted autoplay loop on product cards
+- Videos take priority over images (shows video if both available)
+- Graceful fallback if video fails to load
+- Recommended: 5-15 second clips, under 5MB, 720p or 1080p
+
+See `videos/README.md` for format specs and examples.
+
 ## Legal & Compliance
 
 ### Affiliate Disclosure
