@@ -200,20 +200,19 @@ function getScoreClass(score) {
 
 ### Add Product Images
 
-**Option 1: Hotlink from AliExpress CDN**
-```
-image_url: https://ae01.alicdn.com/kf/...../Product-Image.jpg
-```
+**Image sources:** Use official product images from Amazon, Google Store, Xiaomi, or Walmart — **not** AliExpress (AliExpress scraping is blocked by captcha).
 
-**Option 2: Mirror into repo**
-1. Download product image
-2. Save to `images/product-id.jpg`
-3. Set in affiliate.txt:
-```
-image_local: images/kinhank-g1.jpg
-```
+**Option 1: Mirror into repo (RECOMMENDED)**
+1. Download official product images from sources documented in `images/README.md`
+2. Save to `images/<product-id>.jpg` (or `.webp` or `.png`)
+3. Images are already referenced in `affiliate.txt` via `image_local: images/<id>.jpg`
+4. Commit and push
 
-Option 2 is safer (won't break if CDN blocks hotlinking).
+**Option 2: Hotlink (fallback)**
+- Set `image_url:` in `affiliate.txt` to an official image URL
+- Less reliable (host may block hotlinking)
+
+See `images/README.md` for specific image sources for each product.
 
 ## Legal & Compliance
 
